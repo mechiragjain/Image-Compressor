@@ -1,17 +1,26 @@
 import React, {useState} from 'react';
 
+/*Javascript module to be run in the web browser for image compression.*/
 import imageCompression from "browser-image-compression";
+
+/*Including css file*/
 import './Compressor.css'
 
+/*Importing Upload and Download Image Icon*/
 import Download from '../Images/Download.png';
 import Upload from '../Images/Upload.png';
 
+/*Importing NavBar Component to create a Beautiful Navbar and Card Component from Bootstrap */
 import {Navbar, Card} from "react-bootstrap";
 
+/*Import the Font Awesome Icons that are used in this file*/
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImage } from '@fortawesome/free-solid-svg-icons'
 
+
+//This function will be exported to App.js
 function Compressor(){
+
 
   const [compressedLink, setCompressedLink ] = useState("");
   const [originalImage, setOriginalImage ] = useState("");
@@ -20,15 +29,19 @@ function Compressor(){
   const [uploadImage, setUploadImage ] = useState(false);
   const [outputFileName, setOutputFileName ] = useState("");
 
-  //It will handle upload part of URL
+  //It will handle upload part of image
   function uploadLink(event){
+    //To get the image file which user had uploaded in the input field
     const imageFile = event.target.files[0];
+    // Create a DOMString containing a URL that represents the imageFile
     setOriginalLink(URL.createObjectURL(imageFile));
+    //Now set the original image link, name of output file and upload image state
     setOriginalImage(imageFile);
     setOutputFileName(imageFile.name);
     setUploadImage(true);
   }
 
+  //This will be called when user clicks on Compress Button
   function click(e){
     e.preventDefault();
 
@@ -43,6 +56,7 @@ function Compressor(){
       return 0;
     }
 
+    //this code will compress the original image
     let output;
     imageCompression(originalImage, options).then(x => {
       output = x;
@@ -57,13 +71,12 @@ function Compressor(){
 
   return(
     <div className="mainContainer">
-    <Navbar className="navbar justify-content-center" bg="light" variant="light">
-
-      <Navbar.Brand className="navbar-content" href="/">
-      <FontAwesomeIcon className="social-icons changeOn" icon={faImage} size={1} />{' '}
-      Image Compressor
-      </Navbar.Brand>
-  </Navbar>
+      <Navbar className="navbar justify-content-center" bg="light" variant="light">
+        <Navbar.Brand className="navbar-content" href="/">
+          <FontAwesomeIcon className="social-icons changeOn" icon={faImage} size={1} />{' '}
+          Image Compressor
+        </Navbar.Brand>
+      </Navbar>
 
         <div className="row mt-5">
           <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12">
