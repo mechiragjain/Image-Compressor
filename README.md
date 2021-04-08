@@ -1,6 +1,6 @@
 # Image Compressor
 
-![chatgram](https://devmeet.in/wp-content/uploads/2020/07/freesnippingtool.com_capture_20200718020518-1536x709.png)
+![Image Compressor](./src/Images/Project.png)
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
@@ -11,9 +11,6 @@
 This is a Image Compressor application developed using React.js Package browser-image-compressor. This online image compressor allows to compress your JPG or PNG images to save your disk space and database space.
 
 ### Link - https://imagecompressor.netlify.app/
-
-### Want to learn how to develop Image Compressor using React ? If yes then visit the below Link
-### [View Blog](https://devmeet.in/develop-image-compressor-using-react/)
 
 ## 🏁 Technology Stack
 
