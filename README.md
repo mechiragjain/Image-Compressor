@@ -11,6 +11,7 @@
 This is a Image Compressor application developed using React.js Package browser-image-compressor. This online image compressor allows to compress your JPG or PNG images to save your disk space and database space.
 
 ### Link - https://imagecompressor.netlify.app/
+### Blog - [Read](https://chirag-jain.medium.com/image-compressor-website-using-react-9c7e631147ac)
 
 ## 🏁 Technology Stack
 
